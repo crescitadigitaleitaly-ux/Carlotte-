@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import { Sparkles, Calendar, BookOpen, Quote } from 'lucide-react';
+import { useLang } from '../LanguageContext';
+import { t } from '../translations';
 
 export default function StoryView() {
+  const { lang } = useLang();
   const [selectedEra, setSelectedEra] = useState<'2018' | '2021'>('2021');
 
   const timelineEvents = {
     '2018': {
-      title: 'Boselli Palace',
-      subtitle: 'The Home Private Kitchen Era',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAOBHZq5SuGRY4bWMJOUGz9BIkgn-ilAoEEizQ5gf7wYVYiBNcx55BhHQD_VE7I4zNHrJaHOLrIMXL_Gvvn0sXAFRnWXqLNPDJuaqYVVl4LytQq1BNcbOCxz3fZsMsCdy69wFv3sxciwt87gGWgwljIofSzBFgnDX4B_Db6mhjtlQitxYFPmVGoBi2xV4nzKjQN4AAf62c_vtXtFW-oEH5ElRjOOcdV6SwwwgtqDDnEcHDYRWmQ-AkphiT-ohDKD0H-nRKkMjo7gOE',
-      narrative: 'Carletto originated in 2018 as a highly confidential, warm "Home Restaurant" in a 1400s apartment inside the historic Boselli Palace on Piazzetta della Maddalena 7R. Squeezing in just a few tables, Chef Carlo Astengo served meticulously reconstructed gourmet dishes that paired innovative techniques with local seafood assets.',
-      stats: 'A few intimate tables, Piazzetta della Maddalena 7R, 2018-2021 era'
+      title: t.boselliTitle[lang],
+      subtitle: t.boselliSubtitle[lang],
+      image: '/images/interior/dining-room-painting.jpg',
+      narrative: t.boselliNarrative[lang],
+      stats: t.boselliStats[lang]
     },
     '2021': {
-      title: 'Palazzo Santa Chiara',
-      subtitle: 'The 16th-Century Clarisse Convent Sanctuary',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAK2gaRs6HCAk9a27Zg8Kl7rhXBrZoDoJXajAgDS32yL-ypsDdo7iyxWpwFNECly4ET2U5Lfbp38JXdOTRXTsR-eDcQgPqvlMjfgbzyKVkmqi7kzbdmTOQBrJuTvMHaMjV7lPbDPwckzPIOY2D53EMTNM50njZbLbwNrKCM_WCbqkOMsQxYJjZDeSbWnVwJAcLPIGroYwPZyKzVmv_2N_JILHctzEmlOEPqqetL70p60y3ovu1hkheLm-ZmDKW3Bz8wci3GjytwJ-M',
-      narrative: 'On September 16, 2021, Carletto transitioned to its breathtaking current home at Via Pia 118R inside the cloistered stone cellars of Palazzo Santa Chiara, a former Clarisse convent. While originally envisioned inside a 1600s chapel, complex bureaucratic issues with the fine art heritage institute redirected Carlo to this stunning, air-conditioned sanctuary where only 20 seats (across 7 spacious tables) exist to preserve complete privacy.',
-      stats: '20 seats (7 tables), Mon-Sat, active Via Pia 118R'
+      title: t.palazzoTitle[lang],
+      subtitle: t.palazzoSubtitle[lang],
+      image: '/images/interior/dining-room-overview.jpg',
+      narrative: t.palazzoNarrative[lang],
+      stats: t.palazzoStats[lang]
     }
   };
 
@@ -27,16 +30,16 @@ export default function StoryView() {
       <section className="border-b-2 border-ink-black pb-8">
         <div className="flex justify-between items-center mb-3">
           <span className="font-oswald text-[10px] uppercase tracking-[0.25em] text-accent-vermilion font-bold">
-            THE BLOODLINE & HERITAGE
+            {t.bloodlineHeritage[lang]}
           </span>
-          <span className="text-xs font-bold font-serif italic text-ink-black">Ligurian Lineage</span>
+          <span className="text-xs font-bold font-serif italic text-ink-black">{t.ligurianLineage[lang]}</span>
         </div>
         <h1 className="font-anton text-5xl sm:text-7xl uppercase text-ink-black leading-[0.85] tracking-tighter mb-4">
-          CHEF CARLO<br />
+          {t.chefCarlo[lang]}<br />
           <span className="text-accent-vermilion font-serif font-bold italic tracking-tight lowercase block mt-1 sm:mt-2">astengo</span>
         </h1>
         <p className="font-serif text-secondary text-base max-w-2xl leading-relaxed">
-          The culinary soul of Carletto lives at the threshold of industrial memory and clerical sanctuary. Meet the accountant and former amateur theater actor who converted historical convent vaults into Savona's most exclusive culinary stage.
+          {t.storyDesc[lang]}
         </p>
       </section>
 
@@ -47,15 +50,14 @@ export default function StoryView() {
         <div className="lg:col-span-5 relative group border-2 border-ink-black bg-surface-cream p-4 shadow-[8px_8px_0px_0px_rgba(26,26,26,1)]">
           <div className="aspect-[4/5] overflow-hidden border-2 border-ink-black">
             <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_kIThqyz8aTRBtYjUnf_ajGWYIWUBRjgFvmkAe6rg17P6nAzRLIRVTU7viBqXjG7RdKlV25B9k2cDteS7nO6qYg5FnynAgfiepOThBQ58zNftfsJv0MwJjFZXimp2wszbsxxbc9JWLwPlz66pOwm_NIQp-SAt24AnLuH5dflE1IqTLN6XBVSElK1A0DOrpQkC6bC8vDjnIKh-EUZyTSoLv_NlgGOQGoPuZ4J2H04644VRc4h9gRNIq0LU7048biigFYcdalm8vLc" 
-              alt="Chef Carlo Astengo Portrait" 
-              referrerPolicy="no-referrer"
+              src="/images/interior/brick-wall-table.jpg"
+              alt="Chef Carlo Astengo's intimate dining setting"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
             />
           </div>
           <div className="mt-4 font-oswald text-center">
             <span className="font-anton uppercase text-lg text-ink-black block">Carlo Astengo</span>
-            <span className="text-[10px] uppercase tracking-widest text-accent-vermilion font-black">FOUNDING CUSTODIAN & CHEF</span>
+            <span className="text-[10px] uppercase tracking-widest text-accent-vermilion font-black">{t.foundingCustodian[lang]}</span>
           </div>
         </div>
 
@@ -66,27 +68,27 @@ export default function StoryView() {
           <div className="bg-[#F8F5EE] border-l-4 border-accent-vermilion p-6 text-ink-black font-serif text-lg relative border border-y-2 border-r-2 border-ink-black">
             <Quote className="absolute top-2 right-4 w-10 h-10 text-accent-vermilion/10 stroke-[2px]" />
             <p className="leading-relaxed relative z-10 font-bold italic">
-              "We cook in absolute loyalty to raw Ligurian elements. A fish from captain Stefano, an artichoke from the limestone hills, cooked briefly, served in full silence under five hundred years of monastery stone."
+              {t.chefQuote[lang]}
             </p>
           </div>
 
           <div className="font-serif text-secondary space-y-4 text-base leading-relaxed">
             <p>
-              Chef Carlo Astengo (born 1966) originally trained as an accountant, graduating from a technical institute for accountants, and began a career path toward becoming a commercialista (certified public accountant). Driven by an artistic spirit, he is entirely self-taught (autodidatta).
+              {t.chefBio1[lang]}
             </p>
             <p>
-              He committed himself completely to fine dining, with his formal culinary transition being deeply influenced by a pivotal training stage and apprenticeship under chef Alfredo Iannacone in Avellino. Carlo translates this meticulous accountant precision directly to the kitchen boards, omitting heavy cream and fats to focus on clean, high-intensity flavor extractions.
+              {t.chefBio2[lang]}
             </p>
           </div>
 
           <div className="border-t border-ink-black/15 pt-6 grid grid-cols-2 gap-6 font-oswald text-xs">
             <div>
-              <span className="text-ink-black font-anton text-lg block uppercase">SAVONA BORN</span>
-              <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">ROOTED IN THE LIGURIAN SEA</span>
+              <span className="text-ink-black font-anton text-lg block uppercase">{t.savonaBorn[lang]}</span>
+              <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">{t.rootedSea[lang]}</span>
             </div>
             <div>
-              <span className="text-accent-vermilion font-anton text-lg block uppercase">ACCOUNTANT BG</span>
-              <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">AUTO-DIDACT & APPRENTICED</span>
+              <span className="text-accent-vermilion font-anton text-lg block uppercase">{t.accountantBg[lang]}</span>
+              <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">{t.autodidact[lang]}</span>
             </div>
           </div>
 
@@ -99,26 +101,25 @@ export default function StoryView() {
         <div className="space-y-6">
           <BookOpen className="w-8 h-8 text-accent-vermilion" />
           <h2 className="font-anton text-3xl uppercase tracking-tight leading-none text-ink-black">
-            LIGURIAN NAME & VIGEVANO LEATHER CODES
+            {t.grandfatherTitle[lang]}
           </h2>
           <p className="font-serif text-secondary text-sm leading-relaxed">
-            The name <strong>"Carletto"</strong> is a loving diminutive of Carlo's grandfather, Carletto, who was a legendary shoe industrialist building luxury leather riding boots in the Vigevano area. After running his own accounting firm <em>Studio Astengo</em> as a commercialista for over 24 years (1994 to 2018), Carlo translated his grandfather's geometric leather patterns and office accounting rigor directly into culinary plates.
+            {t.grandfatherDesc[lang]}
           </p>
           <div className="p-4 bg-surface-tan border border-ink-black/20 font-serif text-xs italic text-ink-black/80">
-            "Craft is the same whether it is premium leather or crimson Oneglia shrimp; each cut requires exact geometric symmetry, leaving absolutely zero margin for return."
+            {t.grandfatherQuote[lang]}
           </div>
         </div>
 
         {/* Vintage Portrait of grandfather */}
         <div className="relative aspect-video sm:aspect-square bg-white border-2 border-ink-black overflow-hidden shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]">
           <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkwauPCqRXvOIYzMmPTPkFVkphKU34v3XxdQC-FEl9RPV77rZFB7JxHfGiF_RImAUPh6PNK3dghw42k8cgdIGLJARQ6FW9hvjDRiVcs43h-H2CHU_aBDJXhbtq6y0E-JqHDM4V9Lf2P20hZZm_MKlUQzpyc0ekL0OAJJoaEeDb9UpxQY0zYm9NPTpYRHy2hlCMkHzF8avbB3TXrYDLWPwzc39Jh8BdoGfJFce6TdRGgYvkKRir8DhGUDmjyD_2ns4GOBN6akDuioc" 
-            alt="The Grandfather shoe industrialist portrait" 
-            referrerPolicy="no-referrer"
+            src="/images/interior/saletta-francese.jpg"
+            alt="La Nostra Saletta Francese - the heritage dining room"
             className="w-full h-full object-cover grayscale brightness-95"
           />
           <div className="absolute bottom-4 left-4 bg-ink-black text-white px-2.5 py-1 font-oswald text-[9px] uppercase tracking-widest font-black border border-white/20">
-            VIGEVANO PATRIARCH, 1924
+            {t.vigevanoPatriarch[lang]}
           </div>
         </div>
 
@@ -129,10 +130,10 @@ export default function StoryView() {
         <div className="border-b-2 border-ink-black pb-4 flex flex-col sm:flex-row justify-between items-baseline gap-4">
           <div>
             <span className="font-oswald text-xs uppercase tracking-[0.2em] text-accent-vermilion font-bold block mb-1">
-              Dual Period Exhibition
+              {t.dualPeriod[lang]}
             </span>
             <h2 className="font-anton text-3xl uppercase tracking-tight text-ink-black">
-              THE CHRONICLES OF CARLETTO
+              {t.chronicles[lang]}
             </h2>
           </div>
           
@@ -146,7 +147,7 @@ export default function StoryView() {
                   : 'bg-white text-ink-black hover:bg-surface-tan'
               }`}
             >
-              2018: Boselli Palace
+              {t.boselliPalace[lang]}
             </button>
             <button
               onClick={() => setSelectedEra('2021')}
@@ -156,7 +157,7 @@ export default function StoryView() {
                   : 'bg-white text-ink-black hover:bg-surface-tan'
               }`}
             >
-              2021: Santa Chiara Convent
+              {t.santaChiaraConvent[lang]}
             </button>
           </div>
         </div>
@@ -169,7 +170,7 @@ export default function StoryView() {
             <img 
               src={timelineEvents[selectedEra].image} 
               alt={timelineEvents[selectedEra].title} 
-              referrerPolicy="no-referrer"
+
               className="absolute inset-0 w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-1000"
             />
             <div className="absolute top-4 left-4 bg-accent-vermilion text-white font-anton text-lg px-2.5 py-1 uppercase tracking-widest border border-ink-black">
@@ -193,7 +194,7 @@ export default function StoryView() {
 
             {/* Metrics indicator */}
             <div className="border-t border-ink-black/10 pt-4 font-oswald text-[10px] uppercase tracking-wider text-[#5e5e5e] font-black">
-              <span className="text-secondary block mb-1">OPERATIONAL PROFILE:</span>
+              <span className="text-secondary block mb-1">{t.operationalProfile[lang]}</span>
               <span className="text-ink-black text-xs font-black">{timelineEvents[selectedEra].stats}</span>
             </div>
           </div>
@@ -205,37 +206,36 @@ export default function StoryView() {
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-cream border-2 border-ink-black p-8 sm:p-12 shadow-[8px_8px_0px_0px_rgba(26,26,26,1)]">
         <div className="lg:col-span-4 aspect-square max-w-sm mx-auto relative overflow-hidden border-2 border-ink-black shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]">
           <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOywdMWX8Hbbfx9e7960pTu-gL7Bc7bKlygpayUHtZnGpxU37C0jEs6Z4N36_chCh4kYC-Jbh9nHRSXkMeI4P7RZOPA38PIShU2mW8iuArStjDFyWGvvQ7CuaS5NrKcrXSzz2dqYlFzsVjRwniX2I-272M-R2DpkyUwCoHZo_dNdxbNqcP9QnLJVF79z2GxShefOIgCTlS3-Z0CCMMKnS_meljtNtu84xrtU6E11a9qAqVrFoi6HOTu0KQqyMlzPs1hZxudkNUOik" 
-            alt="Act I Dinner under candlelight" 
-            referrerPolicy="no-referrer"
+            src="/images/interior/cellar-candlelight.jpg"
+            alt="Act I Dinner under candlelight in the cellar"
             className="w-full h-full object-cover"
           />
           <div className="absolute top-3 right-3 bg-ink-black text-white px-2 py-0.5 font-oswald text-[9px] tracking-widest font-black">
-            ACT I EXPOSURE
+            {t.actIExposure[lang]}
           </div>
         </div>
 
         <div className="lg:col-span-4 aspect-square max-w-sm mx-auto relative overflow-hidden border-2 border-ink-black shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]">
           <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXu1z-J4BkwavfNeDgpShO4d3Xm-h05ehiDa1AWuUaledcWe_0VeQp3zy4Upl43XPu_HEcquA9C0ovdeTB4X0QEAxL37tghmi_8-HhTNeaepUB4hgcL1ml449Q93I-kx5Glf9U8NZCahwqba5d8jCuHEleA39fNOg-mTbzh_3Fmi4b_YP6nsJasKN6_bwFGKI87vqZLkHxc0d17W3GQO3V2f4VLjWR9y-rds_TuRXqoJpbwk5MecfSdTl3Ss19daJGsYu2UeYYrHoME" 
+            src="/images/food/risotto-truffle.jpg" 
             alt="Plating Art Puree Plate" 
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
           />
           <div className="absolute top-3 right-3 bg-accent-vermilion text-white px-2 py-0.5 font-oswald text-[9px] tracking-widest font-black">
-            PLATING ARTISTRY
+            {t.platingArtistry[lang]}
           </div>
         </div>
 
         <div className="lg:col-span-4 space-y-4">
           <span className="font-oswald text-[10px] uppercase tracking-[0.2em] text-[#5e5e5e] font-black block">
-            The Plated Narrative
+            {t.platedNarrative[lang]}
           </span>
           <h4 className="font-anton text-2xl uppercase tracking-wide text-ink-black leading-tight">
-            SYMMETRY ON THE STONE
+            {t.symmetryStone[lang]}
           </h4>
           <p className="font-serif text-secondary text-sm leading-relaxed">
-            Every dish is placed precisely at the intersection of local memory and contemporary geometry. Using hand-glazed terracotta platters and heavy raw linen, we frame each plate as an individual culinary exhibit.
+            {t.symmetryDesc[lang]}
           </p>
           <div className="pt-2">
             <Sparkles className="w-5 h-5 text-accent-vermilion animate-spin duration-[5000ms]" />

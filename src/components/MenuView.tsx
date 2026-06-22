@@ -1,8 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { Search, Filter, ShieldCheck, Soup, Wine, Sparkles } from 'lucide-react';
 import { MenuItem } from '../types';
+import { useLang } from '../LanguageContext';
+import { t } from '../translations';
 
 export default function MenuView() {
+  const { lang } = useLang();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [vegetarianOnly, setVegetarianOnly] = useState(false);
   const [glutenFreeOnly, setGlutenFreeOnly] = useState(false);
@@ -212,16 +215,16 @@ export default function MenuView() {
       <section className="border-b-2 border-ink-black pb-8">
         <div className="flex justify-between items-center mb-3">
           <span className="font-oswald text-[10px] uppercase tracking-[0.25em] text-accent-vermilion font-bold">
-            ACTS I, II, & III
+            {t.menuActs[lang]}
           </span>
-          <span className="text-xs font-bold font-serif italic text-ink-black">Savona Terraces</span>
+          <span className="text-xs font-bold font-serif italic text-ink-black">{t.savonTerraces[lang]}</span>
         </div>
         <h1 className="font-anton text-5xl sm:text-7xl uppercase text-ink-black leading-[0.85] tracking-tighter mb-4">
-          CURATED CULINARY<br />
-          <span className="text-accent-vermilion font-serif font-bold italic tracking-tight lowercase block mt-1 sm:mt-2">manifesto</span>
+          {t.curatedCulinary[lang]}<br />
+          <span className="text-accent-vermilion font-serif font-bold italic tracking-tight lowercase block mt-1 sm:mt-2">{t.manifesto[lang]}</span>
         </h1>
         <p className="font-serif text-secondary text-base max-w-2xl leading-relaxed">
-          Our dishes are developed by Chef Carlo Astengo around the absolute seasonality of the Savona terroir. We cooperate with select mountain producers and local sea pilots to maintain a sustainable, zero-waste cooking program.
+          {t.menuDesc[lang]}
         </p>
       </section>
 
@@ -229,27 +232,26 @@ export default function MenuView() {
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-0 bg-surface-cream border-2 border-ink-black shadow-[8px_8px_0px_0px_rgba(26,26,26,1)]">
         <div className="lg:col-span-7 aspect-video relative overflow-hidden h-64 lg:h-96 border-b-2 lg:border-b-0 lg:border-r-2 border-ink-black">
           <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcKlQUVNd47Hs9_ww2tGcoQcXgWguloAzrDS3XAsOPBF169uOlR2-CAzdtt4v5aoldIEczqic3uYzB4J5tVxmE9jHqthCCqhFpWryMOpmqM3tucjmopKJaOAHyUzEMp1CGpsn1DI9BWOo2Ca8K4NsSM2b9CRzXmqL5soMZ9Rc_Nj44eZTYhH8ldEKZ3w3u1v298Ynw7VsvYAMiVvIKej-A0c1eExKeaJcQkdNCu1o_DM6dAJZRp2niNZP40oKMKodt5CTxxpHQgZQ" 
-            alt="Savona Harbor Scallops plating" 
-            referrerPolicy="no-referrer"
+            src="/images/food/pasta-oyster.jpg" 
+            alt="Savona Harbor Scallops plating"
             className="w-full h-full object-cover grayscale-[10%] hover:scale-105 hover:grayscale-0 transition-all duration-1000 ease-out"
           />
         </div>
         <div className="lg:col-span-5 p-8 flex flex-col justify-between space-y-6">
           <div className="space-y-4">
             <div className="flex gap-2 text-accent-vermilion font-oswald text-[10px] uppercase tracking-widest font-black items-center">
-              <Soup className="w-4 h-4" /> Fresh Catch Highlight
+              <Soup className="w-4 h-4" /> {t.freshCatch[lang]}
             </div>
             <h3 className="font-anton text-3xl uppercase tracking-tight text-ink-black leading-none">
-              SAVONA HARBOR COLD SCALLOPS
+              {t.savonaColdScallops[lang]}
             </h3>
             <p className="font-serif text-secondary text-sm leading-relaxed">
-              Every morning at 05:00, Carlo monitors the incoming vessels at the Savona quayside. Our premium scallops are preserved alive in cold salt-wells until they are shucked tableside, resulting in an exquisite sweet density contrasted with sour green apple shards.
+              {t.scallopsDesc[lang]}
             </p>
           </div>
           <div>
             <div className="inline-block bg-surface-tan px-2.5 py-1 font-oswald text-[9px] tracking-widest uppercase font-black text-ink-black border border-ink-black/25">
-              Sourced daily from captain stefano’s cutter
+              {t.sourcedDaily[lang]}
             </div>
           </div>
         </div>
@@ -264,7 +266,7 @@ export default function MenuView() {
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-secondary" />
             <input 
               type="text" 
-              placeholder="Filter dishes by element or aroma (e.g. truffle, artichoke, cod)..."
+              placeholder={t.filterPlaceholder[lang]}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-white border-2 border-ink-black py-2.5 pl-11 pr-4 font-oswald text-xs text-ink-black uppercase tracking-wider outline-none placeholder:text-secondary/60 focus:ring-1 focus:ring-accent-vermilion focus:border-accent-vermilion"
@@ -282,7 +284,7 @@ export default function MenuView() {
               }`}
             >
               <Filter className="w-3.5 h-3.5" />
-              Vegetarian {vegetarianOnly ? '✓' : ''}
+              {t.vegetarian[lang]} {vegetarianOnly ? '✓' : ''}
             </button>
             <button
               onClick={() => setGlutenFreeOnly(!glutenFreeOnly)}
@@ -293,7 +295,7 @@ export default function MenuView() {
               }`}
             >
               <ShieldCheck className="w-3.5 h-3.5" />
-              Gluten Free {glutenFreeOnly ? '✓' : ''}
+              {t.glutenFree[lang]} {glutenFreeOnly ? '✓' : ''}
             </button>
           </div>
 
@@ -311,7 +313,7 @@ export default function MenuView() {
                   : 'bg-transparent text-ink-black hover:bg-surface-tan'
               }`}
             >
-              {cat === 'all' ? 'All Sections' : cat}
+              {cat === 'all' ? t.allSections[lang] : cat}
             </button>
           ))}
         </div>
@@ -336,10 +338,10 @@ export default function MenuView() {
                     </h3>
                     <div className="h-0.5 bg-ink-black/10 flex-grow" />
                     <span className="font-oswald text-xxs font-black text-secondary uppercase tracking-widest">
-                      {cat === 'antipasti' && 'Act I'}
-                      {cat === 'primi' && 'Act II'}
-                      {cat === 'secondi' && 'Act III'}
-                      {cat === 'dolci' && 'Epilogue'}
+                      {cat === 'antipasti' && t.actI[lang]}
+                      {cat === 'primi' && t.actII[lang]}
+                      {cat === 'secondi' && t.actIII[lang]}
+                      {cat === 'dolci' && t.epilogue[lang]}
                     </span>
                   </div>
 
@@ -391,7 +393,7 @@ export default function MenuView() {
           <div className="text-center py-12 font-oswald space-y-4">
             <Soup className="w-12 h-12 text-secondary mx-auto opacity-40 animate-bounce" />
             <p className="text-secondary text-sm uppercase tracking-widest font-bold">
-              No dishes match your specific dietary filters.
+              {t.noMatchFilter[lang]}
             </p>
             <button
               onClick={() => {
@@ -402,7 +404,7 @@ export default function MenuView() {
               }}
               className="text-accent-vermilion hover:text-ink-black transition-colors underline font-semibold text-xs uppercase tracking-wider"
             >
-              Clear Filters & Search
+              {t.clearFilters[lang]}
             </button>
           </div>
         )}
@@ -411,19 +413,19 @@ export default function MenuView() {
         <div className="mt-16 bg-surface-tan border-2 border-ink-black p-6 sm:p-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="space-y-2 max-w-lg">
             <span className="font-oswald text-[10px] uppercase tracking-widest text-accent-vermilion font-bold block">
-              Curated Cellar Pairing
+              {t.curatedCellar[lang]}
             </span>
             <h4 className="font-anton text-xl uppercase tracking-wide text-ink-black flex items-center gap-2">
-              <Wine className="w-5 h-5 text-accent-vermilion shrink-0" /> Sommelier Terroir Flight
+              <Wine className="w-5 h-5 text-accent-vermilion shrink-0" /> {t.sommelierTerroirFlight[lang]}
             </h4>
             <p className="font-serif text-xs text-secondary leading-relaxed">
-              Upgrade your narrative with our bespoke Sommelier Terroir Flight. Sourced entirely from small vintages in Genoa and Piedmont. Shaved truffle, sea salt extraction, and dry wood smoked plates are specifically accompanied. 
+              {t.sommelierDesc[lang]}
             </p>
           </div>
           <div className="text-right shrink-0">
-            <div className="font-anton text-2xl text-ink-black">€45 / COVER</div>
+            <div className="font-anton text-2xl text-ink-black">€45 {t.perCover[lang]}</div>
             <span className="font-oswald text-[9px] text-[#5e5e5e] uppercase tracking-widest font-bold block mb-1">
-              Add during reservation check-in
+              {t.addDuringRes[lang]}
             </span>
           </div>
         </div>
