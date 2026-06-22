@@ -69,12 +69,13 @@ export default function App() {
 
           <button
             onClick={() => setActiveTab('HOME')}
-            className="flex items-center gap-2 text-left focus:outline-none group"
+            className="flex items-center text-left focus:outline-none group shrink-0"
           >
-            <div className="font-anton text-2xl font-bold tracking-tighter text-ink-black block leading-none uppercase">
-              STUDIO.CARLETTO
-            </div>
-            <div className="w-2 h-2 bg-accent-vermilion rounded-full group-hover:scale-150 transition-transform"></div>
+            <img
+              src="/images/carletto-logo.png"
+              alt="Carletto Private Restaurant"
+              className="h-14 w-auto object-contain group-hover:opacity-80 transition-opacity"
+            />
           </button>
 
           <nav className="hidden md:flex items-center gap-12 font-oswald text-xs uppercase tracking-widest font-bold">
@@ -230,7 +231,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
 
           <div className="space-y-4">
-            <h5 className="font-anton text-xl tracking-wider text-white">CARLETTO</h5>
+            <img
+              src="/images/carletto-logo.png"
+              alt="Carletto Private Restaurant"
+              className="h-16 w-auto object-contain brightness-0 invert opacity-90"
+            />
             <p className="text-[#a8a49f] lowercase text-xs">
               {t.footerDesc[lang]}
             </p>
