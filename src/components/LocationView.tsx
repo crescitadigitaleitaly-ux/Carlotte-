@@ -66,7 +66,7 @@ export default function LocationView() {
       {/* 1. Header block */}
       <section className="border-b-2 border-ink-black pb-8">
         <div className="flex justify-between items-center mb-3">
-          <span className="font-oswald text-[10px] uppercase tracking-[0.25em] text-accent-vermilion font-bold">
+          <span className="font-oswald text-[11px] uppercase tracking-[0.25em] text-accent-vermilion font-bold">
             {t.sanctuaryAddress[lang]}
           </span>
           <span className="text-xs font-bold font-serif italic text-ink-black">{t.centuryVaults[lang]}</span>
@@ -88,7 +88,7 @@ export default function LocationView() {
           <div className="space-y-6 font-oswald text-sm">
             
             <div className="border-b border-ink-black/10 pb-4">
-              <span className="text-accent-vermilion uppercase tracking-widest text-xs font-black block mb-1">
+              <span className="text-accent-vermilion uppercase tracking-widest text-xs font-bold block mb-1">
                 {t.entranceCoords[lang]}
               </span>
               <p className="text-lg font-bold text-ink-black uppercase flex items-start gap-2 pt-1">
@@ -124,18 +124,18 @@ export default function LocationView() {
               <span className="text-secondary uppercase tracking-widest text-xs font-extrabold block mb-2">
                 {t.conventHours[lang]}
               </span>
-              <div className="space-y-1.5 uppercase font-black text-xs">
+              <div className="space-y-1.5 uppercase font-bold text-xs">
                 <div className="flex justify-between">
                   <span>{t.monSatDinner[lang]}</span>
-                  <span className="font-black text-ink-black">20:00 - 23:30</span>
+                  <span className="font-bold text-ink-black">20:00 - 23:30</span>
                 </div>
                 <div className="flex justify-between">
                   <span>{t.friSatLunch[lang]}</span>
-                  <span className="font-black text-ink-black">12:30 - 15:30</span>
+                  <span className="font-bold text-ink-black">12:30 - 15:30</span>
                 </div>
                 <div className="flex justify-between text-[#FF4D00]">
                   <span>{t.sundays[lang]}</span>
-                  <span className="font-black font-anton uppercase tracking-widest text-sm">{t.cloisterClosed[lang]}</span>
+                  <span className="font-bold font-anton uppercase tracking-widest text-sm">{t.cloisterClosed[lang]}</span>
                 </div>
               </div>
             </div>
@@ -164,30 +164,30 @@ export default function LocationView() {
             {/* Visual Vector map frame simulating steps */}
             <div className="bg-white border-2 border-ink-black p-6 font-serif text-xs space-y-4 uppercase">
               <div className="flex gap-4 items-center">
-                <span className="w-6 h-6 rounded-full bg-ink-black text-white flex items-center justify-center font-anton shrink-0 text-[10px]">1</span>
+                <span className="w-6 h-6 rounded-full bg-ink-black text-white flex items-center justify-center font-anton shrink-0 text-[11px]">1</span>
                 <div>
                   <strong className="text-ink-black font-bold">{t.viaPiaPortal[lang]}</strong>
-                  <p className="text-secondary text-[10px] lowercase leading-tight">{t.viaPiaDesc[lang]}</p>
+                  <p className="text-secondary text-[11px] lowercase leading-tight">{t.viaPiaDesc[lang]}</p>
                 </div>
               </div>
               <div className="flex gap-4 items-center">
-                <span className="w-6 h-6 rounded-full bg-accent-vermilion text-white flex items-center justify-center font-anton shrink-0 text-[10px]">2</span>
+                <span className="w-6 h-6 rounded-full bg-accent-vermilion text-white flex items-center justify-center font-anton shrink-0 text-[11px]">2</span>
                 <div>
                   <strong className="text-ink-black font-bold">{t.oakGate[lang]}</strong>
-                  <p className="text-secondary text-[10px] lowercase leading-tight">{t.oakGateDesc[lang]}</p>
+                  <p className="text-secondary text-[11px] lowercase leading-tight">{t.oakGateDesc[lang]}</p>
                 </div>
               </div>
               <div className="flex gap-4 items-center">
-                <span className="w-6 h-6 rounded-full bg-ink-black text-white flex items-center justify-center font-anton shrink-0 text-[10px]">3</span>
+                <span className="w-6 h-6 rounded-full bg-ink-black text-white flex items-center justify-center font-anton shrink-0 text-[11px]">3</span>
                 <div>
                   <strong className="text-ink-black font-bold">{t.boudoirCloister[lang]}</strong>
-                  <p className="text-secondary text-[10px] lowercase leading-tight">{t.boudoirDesc[lang]}</p>
+                  <p className="text-secondary text-[11px] lowercase leading-tight">{t.boudoirDesc[lang]}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="pt-4 border-t border-ink-black/10 font-oswald text-[9px] text-[#5e5e5e] tracking-widest text-center font-black">
+          <div className="pt-4 border-t border-ink-black/10 font-oswald text-[11px] text-[#5e5e5e] tracking-widest text-center font-bold">
             COORD: 44°18'29.8"N 8°28'53.4"E • ALTITUDE : 12 METERS
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function LocationView() {
             href="https://www.google.com/maps/dir//Via+Pia+118R,+17100+Savona+SV,+Italy"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-ink-black text-white hover:bg-accent-vermilion transition-colors font-oswald text-[10px] uppercase tracking-[0.2em] font-black py-2.5 px-5 border-2 border-ink-black flex items-center gap-2 shrink-0"
+            className="bg-ink-black text-white hover:bg-accent-vermilion transition-colors font-oswald text-[11px] uppercase tracking-[0.2em] font-bold py-2.5 px-5 border-2 border-ink-black flex items-center gap-2 shrink-0"
           >
             <MapPin className="w-3.5 h-3.5" /> {t.getDirections[lang]}
           </a>
@@ -250,7 +250,7 @@ export default function LocationView() {
                 <div className="flex justify-between items-start gap-4">
                   <div>
                     <h4 className="font-anton text-[15px] text-ink-black uppercase tracking-wide">{rev.author}</h4>
-                    <span className="text-accent-vermilion font-oswald text-[10px] uppercase tracking-widest font-black block">{rev.location}</span>
+                    <span className="text-accent-vermilion font-oswald text-[11px] uppercase tracking-widest font-bold block">{rev.location}</span>
                   </div>
                   <span className="text-secondary font-serif text-xs italic shrink-0">{rev.date}</span>
                 </div>
@@ -276,7 +276,7 @@ export default function LocationView() {
             </h4>
 
             {submitted && (
-              <div className="bg-white border-2 border-emerald-500 text-emerald-800 p-3 font-oswald text-[10px] uppercase tracking-widest font-black text-center">
+              <div className="bg-white border-2 border-emerald-500 text-emerald-800 p-3 font-oswald text-[11px] uppercase tracking-widest font-bold text-center">
                 {t.journalPersisted[lang]}
               </div>
             )}

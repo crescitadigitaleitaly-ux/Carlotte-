@@ -214,7 +214,7 @@ export default function MenuView() {
       {/* 1. Header with custom typography */}
       <section className="border-b-2 border-ink-black pb-8">
         <div className="flex justify-between items-center mb-3">
-          <span className="font-oswald text-[10px] uppercase tracking-[0.25em] text-accent-vermilion font-bold">
+          <span className="font-oswald text-[11px] uppercase tracking-[0.25em] text-accent-vermilion font-bold">
             {t.menuActs[lang]}
           </span>
           <span className="text-xs font-bold font-serif italic text-ink-black">{t.savonTerraces[lang]}</span>
@@ -239,7 +239,7 @@ export default function MenuView() {
         </div>
         <div className="lg:col-span-5 p-8 flex flex-col justify-between space-y-6">
           <div className="space-y-4">
-            <div className="flex gap-2 text-accent-vermilion font-oswald text-[10px] uppercase tracking-widest font-black items-center">
+            <div className="flex gap-2 text-accent-vermilion font-oswald text-[11px] uppercase tracking-widest font-bold items-center">
               <Soup className="w-4 h-4" /> {t.freshCatch[lang]}
             </div>
             <h3 className="font-anton text-3xl uppercase tracking-tight text-ink-black leading-none">
@@ -250,7 +250,7 @@ export default function MenuView() {
             </p>
           </div>
           <div>
-            <div className="inline-block bg-surface-tan px-2.5 py-1 font-oswald text-[9px] tracking-widest uppercase font-black text-ink-black border border-ink-black/25">
+            <div className="inline-block bg-surface-tan px-2.5 py-1 font-oswald text-[11px] tracking-widest uppercase font-bold text-ink-black border border-ink-black/25">
               {t.sourcedDaily[lang]}
             </div>
           </div>
@@ -274,7 +274,7 @@ export default function MenuView() {
           </div>
 
           {/* Filtering buttons (Gluten-Free, Vegetarian) */}
-          <div className="flex flex-wrap gap-2 font-oswald text-[11px] tracking-widest uppercase font-black">
+          <div className="flex flex-wrap gap-2 font-oswald text-[11px] tracking-widest uppercase font-bold">
             <button
               onClick={() => setVegetarianOnly(!vegetarianOnly)}
               className={`px-4 py-2.5 border-2 border-ink-black flex items-center gap-1.5 transition-colors cursor-pointer ${
@@ -302,7 +302,7 @@ export default function MenuView() {
         </div>
 
         {/* Categorization tabs */}
-        <div className="flex flex-wrap gap-1.5 border-t border-ink-black/15 pt-4 font-oswald text-[10px] uppercase tracking-widest font-black">
+        <div className="flex flex-wrap gap-1.5 border-t border-ink-black/15 pt-4 font-oswald text-[11px] uppercase tracking-widest font-bold">
           {['all', 'antipasti', 'primi', 'secondi', 'dolci'].map((cat) => (
             <button
               key={cat}
@@ -337,7 +337,7 @@ export default function MenuView() {
                       {cat}
                     </h3>
                     <div className="h-0.5 bg-ink-black/10 flex-grow" />
-                    <span className="font-oswald text-xxs font-black text-secondary uppercase tracking-widest">
+                    <span className="font-oswald text-xxs font-bold text-secondary uppercase tracking-widest">
                       {cat === 'antipasti' && t.actI[lang]}
                       {cat === 'primi' && t.actII[lang]}
                       {cat === 'secondi' && t.actIII[lang]}
@@ -369,7 +369,7 @@ export default function MenuView() {
                         )}
 
                         {/* Badges */}
-                        <div className="flex gap-2 pt-1 font-oswald text-[10px] uppercase font-bold tracking-widest">
+                        <div className="flex gap-2 pt-1 font-oswald text-[11px] uppercase font-bold tracking-widest">
                           {item.isVegetarian && (
                             <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200">
                               VEG
@@ -412,7 +412,7 @@ export default function MenuView() {
         {/* Sommelier Flight Invitation Section */}
         <div className="mt-16 bg-surface-tan border-2 border-ink-black p-6 sm:p-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="space-y-2 max-w-lg">
-            <span className="font-oswald text-[10px] uppercase tracking-widest text-accent-vermilion font-bold block">
+            <span className="font-oswald text-[11px] uppercase tracking-widest text-accent-vermilion font-bold block">
               {t.curatedCellar[lang]}
             </span>
             <h4 className="font-anton text-xl uppercase tracking-wide text-ink-black flex items-center gap-2">
@@ -424,7 +424,7 @@ export default function MenuView() {
           </div>
           <div className="text-right shrink-0">
             <div className="font-anton text-2xl text-ink-black">€45 {t.perCover[lang]}</div>
-            <span className="font-oswald text-[9px] text-[#5e5e5e] uppercase tracking-widest font-bold block mb-1">
+            <span className="font-oswald text-[11px] text-[#5e5e5e] uppercase tracking-widest font-bold block mb-1">
               {t.addDuringRes[lang]}
             </span>
           </div>

@@ -29,7 +29,7 @@ export default function StoryView() {
       {/* 1. Header block */}
       <section className="border-b-2 border-ink-black pb-8">
         <div className="flex justify-between items-center mb-3">
-          <span className="font-oswald text-[10px] uppercase tracking-[0.25em] text-accent-vermilion font-bold">
+          <span className="font-oswald text-[11px] uppercase tracking-[0.25em] text-accent-vermilion font-bold">
             {t.bloodlineHeritage[lang]}
           </span>
           <span className="text-xs font-bold font-serif italic text-ink-black">{t.ligurianLineage[lang]}</span>
@@ -57,7 +57,7 @@ export default function StoryView() {
           </div>
           <div className="mt-4 font-oswald text-center">
             <span className="font-anton uppercase text-lg text-ink-black block">Carlo Astengo</span>
-            <span className="text-[10px] uppercase tracking-widest text-accent-vermilion font-black">{t.foundingCustodian[lang]}</span>
+            <span className="text-[11px] uppercase tracking-widest text-accent-vermilion font-bold">{t.foundingCustodian[lang]}</span>
           </div>
         </div>
 
@@ -84,11 +84,11 @@ export default function StoryView() {
           <div className="border-t border-ink-black/15 pt-6 grid grid-cols-2 gap-6 font-oswald text-xs">
             <div>
               <span className="text-ink-black font-anton text-lg block uppercase">{t.savonaBorn[lang]}</span>
-              <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">{t.rootedSea[lang]}</span>
+              <span className="text-[11px] text-secondary tracking-wider font-extrabold uppercase">{t.rootedSea[lang]}</span>
             </div>
             <div>
               <span className="text-accent-vermilion font-anton text-lg block uppercase">{t.accountantBg[lang]}</span>
-              <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">{t.autodidact[lang]}</span>
+              <span className="text-[11px] text-secondary tracking-wider font-extrabold uppercase">{t.autodidact[lang]}</span>
             </div>
           </div>
 
@@ -118,7 +118,7 @@ export default function StoryView() {
             alt="La Nostra Saletta Francese - the heritage dining room"
             className="w-full h-full object-cover grayscale brightness-95"
           />
-          <div className="absolute bottom-4 left-4 bg-ink-black text-white px-2.5 py-1 font-oswald text-[9px] uppercase tracking-widest font-black border border-white/20">
+          <div className="absolute bottom-4 left-4 bg-ink-black text-white px-2.5 py-1 font-oswald text-[11px] uppercase tracking-widest font-bold border border-white/20">
             {t.vigevanoPatriarch[lang]}
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function StoryView() {
           </div>
           
           {/* ERA Selector buttons */}
-          <div className="flex gap-2 font-oswald font-black text-[10px] uppercase tracking-widest">
+          <div className="flex gap-2 font-oswald font-bold text-[11px] uppercase tracking-widest">
             <button
               onClick={() => setSelectedEra('2018')}
               className={`px-4 py-2 border-2 border-ink-black transition-all cursor-pointer ${
@@ -181,7 +181,7 @@ export default function StoryView() {
           {/* Era narrative info */}
           <div className="lg:col-span-7 flex flex-col justify-between py-2 space-y-6">
             <div className="space-y-4">
-              <span className="font-oswald text-[11px] uppercase tracking-widest text-accent-vermilion font-black flex items-center gap-2">
+              <span className="font-oswald text-[11px] uppercase tracking-widest text-accent-vermilion font-bold flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-accent-vermilion" /> {timelineEvents[selectedEra].subtitle}
               </span>
               <h3 className="font-anton text-4xl uppercase tracking-tight text-ink-black">
@@ -193,9 +193,9 @@ export default function StoryView() {
             </div>
 
             {/* Metrics indicator */}
-            <div className="border-t border-ink-black/10 pt-4 font-oswald text-[10px] uppercase tracking-wider text-[#5e5e5e] font-black">
+            <div className="border-t border-ink-black/10 pt-4 font-oswald text-[11px] uppercase tracking-wider text-[#5e5e5e] font-bold">
               <span className="text-secondary block mb-1">{t.operationalProfile[lang]}</span>
-              <span className="text-ink-black text-xs font-black">{timelineEvents[selectedEra].stats}</span>
+              <span className="text-ink-black text-xs font-bold">{timelineEvents[selectedEra].stats}</span>
             </div>
           </div>
 
@@ -210,7 +210,7 @@ export default function StoryView() {
             alt="Act I Dinner under candlelight in the cellar"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-3 right-3 bg-ink-black text-white px-2 py-0.5 font-oswald text-[9px] tracking-widest font-black">
+          <div className="absolute top-3 right-3 bg-ink-black text-white px-2 py-0.5 font-oswald text-[11px] tracking-widest font-bold">
             {t.actIExposure[lang]}
           </div>
         </div>
@@ -222,13 +222,13 @@ export default function StoryView() {
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
           />
-          <div className="absolute top-3 right-3 bg-accent-vermilion text-white px-2 py-0.5 font-oswald text-[9px] tracking-widest font-black">
+          <div className="absolute top-3 right-3 bg-accent-vermilion text-white px-2 py-0.5 font-oswald text-[11px] tracking-widest font-bold">
             {t.platingArtistry[lang]}
           </div>
         </div>
 
         <div className="lg:col-span-4 space-y-4">
-          <span className="font-oswald text-[10px] uppercase tracking-[0.2em] text-[#5e5e5e] font-black block">
+          <span className="font-oswald text-[11px] uppercase tracking-[0.2em] text-[#5e5e5e] font-bold block">
             {t.platedNarrative[lang]}
           </span>
           <h4 className="font-anton text-2xl uppercase tracking-wide text-ink-black leading-tight">

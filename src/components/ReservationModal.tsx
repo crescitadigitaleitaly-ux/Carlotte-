@@ -236,26 +236,26 @@ export default function ReservationModal({ isOpen, onClose, onAddReservation }: 
             <h2 className="font-anton text-3xl uppercase tracking-tight text-ink-black mb-2">
               {t.reservationSecured[lang]}
             </h2>
-            <div className="inline-block bg-surface-tan border border-ink-black/25 px-4 py-1 font-oswald uppercase tracking-widest text-xs font-black mb-6">
+            <div className="inline-block bg-surface-tan border border-ink-black/25 px-4 py-1 font-oswald uppercase tracking-widest text-xs font-bold mb-6">
               Palazzo Santa Chiara, Savona
             </div>
 
             <div className="bg-white border-2 border-ink-black p-6 text-left max-w-sm mx-auto font-oswald space-y-3 mb-8 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]">
               <div className="flex justify-between border-b border-ink-black/10 pb-1.5 text-xs">
-                <span className="text-secondary font-black">{t.guestLabel[lang]}</span>
+                <span className="text-secondary font-bold">{t.guestLabel[lang]}</span>
                 <span className="font-anton text-sm text-ink-black uppercase">{formData.name}</span>
               </div>
               <div className="flex justify-between border-b border-ink-black/10 pb-1.5 text-xs">
-                <span className="text-secondary font-black">{t.coversLabel[lang]}</span>
+                <span className="text-secondary font-bold">{t.coversLabel[lang]}</span>
                 <span className="font-bold">{formData.guests} {formData.guests === 1 ? t.person[lang] : t.people[lang]}</span>
               </div>
               <div className="flex justify-between border-b border-ink-black/10 pb-1.5 text-xs">
-                <span className="text-secondary font-black">{t.dateTimeLabel[lang]}</span>
+                <span className="text-secondary font-bold">{t.dateTimeLabel[lang]}</span>
                 <span className="font-bold">{formData.date} at {formData.time}</span>
               </div>
               {formData.specialRequests && (
                 <div className="text-xs pt-1">
-                  <span className="text-secondary font-black block mb-1">{t.notesLabel[lang]}</span>
+                  <span className="text-secondary font-bold block mb-1">{t.notesLabel[lang]}</span>
                   <p className="font-serif italic text-ink-black">"{formData.specialRequests}"</p>
                 </div>
               )}
@@ -267,7 +267,7 @@ export default function ReservationModal({ isOpen, onClose, onAddReservation }: 
 
             <button
               onClick={handleReset}
-              className="px-8 py-3 bg-ink-black text-white font-oswald font-black text-xs uppercase tracking-widest hover:bg-accent-vermilion transition-colors cursor-pointer"
+              className="px-8 py-3 bg-ink-black text-white font-oswald font-bold text-xs uppercase tracking-widest hover:bg-accent-vermilion transition-colors cursor-pointer"
             >
               {t.backToRestaurant[lang]}
             </button>

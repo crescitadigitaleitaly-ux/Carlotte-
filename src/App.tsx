@@ -51,7 +51,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-surface-cream text-on-surface flex flex-col font-sans selection:bg-accent-vermilion selection:text-white">
       {/* 1. Global Announcement Micro-Header */}
-      <div className="bg-ink-black text-[#FDFCF6]/90 text-[10px] font-oswald uppercase tracking-[0.25em] py-2.5 px-4 sm:px-8 flex justify-between items-center border-b border-[#FDFCF6]/15 shrink-0">
+      <div className="bg-ink-black text-[#FDFCF6]/90 text-[11px] font-oswald uppercase tracking-[0.25em] py-2.5 px-4 sm:px-8 flex justify-between items-center border-b border-[#FDFCF6]/15 shrink-0">
         <div className="flex items-center gap-2">
           <div className="w-2.5 h-2.5 bg-accent-vermilion rounded-full animate-pulse" />
           <span className="font-bold">{t.status[lang]}</span>
@@ -71,7 +71,7 @@ export default function App() {
             onClick={() => setActiveTab('HOME')}
             className="flex items-center gap-2 text-left focus:outline-none group"
           >
-            <div className="font-anton text-2xl font-black tracking-tighter text-ink-black block leading-none uppercase">
+            <div className="font-anton text-2xl font-bold tracking-tighter text-ink-black block leading-none uppercase">
               STUDIO.CARLETTO
             </div>
             <div className="w-2 h-2 bg-accent-vermilion rounded-full group-hover:scale-150 transition-transform"></div>
@@ -100,7 +100,7 @@ export default function App() {
           <div className="flex items-center gap-3">
 
             {/* Language Toggle */}
-            <div className="flex border-2 border-ink-black overflow-hidden font-oswald text-[10px] uppercase tracking-widest font-black">
+            <div className="flex border-2 border-ink-black overflow-hidden font-oswald text-[11px] uppercase tracking-widest font-bold">
               <button
                 onClick={() => setLang('it')}
                 className={`px-2.5 py-2 transition-colors ${
@@ -127,7 +127,7 @@ export default function App() {
                 }`}
               >
                 <ClipboardList className="w-4 h-4" />
-                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-accent-vermilion text-white font-anton text-[9px] flex items-center justify-center rounded-full border border-white">
+                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-accent-vermilion text-white font-anton text-[11px] flex items-center justify-center rounded-full border border-white">
                   {reservations.length}
                 </span>
               </button>
@@ -135,7 +135,7 @@ export default function App() {
 
             <button
               onClick={() => setIsBookingOpen(true)}
-              className="bg-accent-vermilion text-white hover:bg-ink-black transition-colors font-oswald text-xs uppercase tracking-[0.2em] font-black py-3 px-6 border-2 border-ink-black shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5"
+              className="bg-accent-vermilion text-white hover:bg-ink-black transition-colors font-oswald text-xs uppercase tracking-[0.2em] font-bold py-3 px-6 border-2 border-ink-black shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5"
             >
               {t.reserveSeats[lang]}
             </button>
@@ -161,14 +161,14 @@ export default function App() {
                   <div key={res.id} className="bg-white border-2 border-ink-black p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
                     <div>
                       <span className="font-bold text-ink-black text-sm block">{res.name}</span>
-                      <p className="text-secondary tracking-widest text-[10px] mt-1">
+                      <p className="text-secondary tracking-widest text-[11px] mt-1">
                         {res.guests} {res.guests === 1 ? t.person[lang] : t.people[lang]} • {res.date} at {res.time}
                       </p>
                     </div>
 
                     <button
                       onClick={() => handleCancelReservation(res.id)}
-                      className="px-3 py-1.5 bg-[#ba1a1a] text-white hover:bg-ink-black hover:text-white transition-colors uppercase font-bold text-[9px] tracking-widest"
+                      className="px-3 py-1.5 bg-[#ba1a1a] text-white hover:bg-ink-black hover:text-white transition-colors uppercase font-bold text-[11px] tracking-widest"
                     >
                       {t.cancelSeat[lang]}
                     </button>
@@ -181,7 +181,7 @@ export default function App() {
       </header>
 
       {/* Mobile Sticky Navigation Rail */}
-      <div className="md:hidden fixed bottom-0 inset-x-0 z-[40] bg-surface-cream border-t-3 border-ink-black py-3 flex justify-around font-oswald text-[10px] tracking-widest font-bold uppercase shadow-lg">
+      <div className="md:hidden fixed bottom-0 inset-x-0 z-[40] bg-surface-cream border-t-3 border-ink-black py-3 flex justify-around font-oswald text-[11px] tracking-widest font-bold uppercase shadow-lg">
         {([
           { key: 'HOME', icon: Compass },
           { key: 'MENU', icon: Wine },
