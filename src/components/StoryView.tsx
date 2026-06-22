@@ -9,15 +9,15 @@ export default function StoryView() {
       title: 'Boselli Palace',
       subtitle: 'The Home Private Kitchen Era',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAOBHZq5SuGRY4bWMJOUGz9BIkgn-ilAoEEizQ5gf7wYVYiBNcx55BhHQD_VE7I4zNHrJaHOLrIMXL_Gvvn0sXAFRnWXqLNPDJuaqYVVl4LytQq1BNcbOCxz3fZsMsCdy69wFv3sxciwt87gGWgwljIofSzBFgnDX4B_Db6mhjtlQitxYFPmVGoBi2xV4nzKjQN4AAf62c_vtXtFW-oEH5ElRjOOcdV6SwwwgtqDDnEcHDYRWmQ-AkphiT-ohDKD0H-nRKkMjo7gOE',
-      narrative: 'Carletto originated in complete confidentiality as a micro home dining experience inside the historic apartments of Boselli Palace in Savona. Squeezing in just eight guests at a small, beautiful mahogany kitchen counter on Friday nights, Chef Carlo used old handwritten journals from his grandmother to reconstruct authentic northern Italian maritime dishes.',
-      stats: '8 guests, weekly service, fully secret invitations'
+      narrative: 'Carletto originated in 2018 as a highly confidential, warm "Home Restaurant" in a 1400s apartment inside the historic Boselli Palace on Piazzetta della Maddalena 7R. Squeezing in just a few tables, Chef Carlo Astengo served meticulously reconstructed gourmet dishes that paired innovative techniques with local seafood assets.',
+      stats: 'A few intimate tables, Piazzetta della Maddalena 7R, 2018-2021 era'
     },
     '2021': {
       title: 'Palazzo Santa Chiara',
-      subtitle: 'The 16th-Century Sanctuary Sanctuary',
+      subtitle: 'The 16th-Century Clarisse Convent Sanctuary',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAK2gaRs6HCAk9a27Zg8Kl7rhXBrZoDoJXajAgDS32yL-ypsDdo7iyxWpwFNECly4ET2U5Lfbp38JXdOTRXTsR-eDcQgPqvlMjfgbzyKVkmqi7kzbdmTOQBrJuTvMHaMjV7lPbDPwckzPIOY2D53EMTNM50njZbLbwNrKCM_WCbqkOMsQxYJjZDeSbWnVwJAcLPIGroYwPZyKzVmv_2N_JILHctzEmlOEPqqetL70p60y3ovu1hkheLm-ZmDKW3Bz8wci3GjytwJ-M',
-      narrative: 'Seeking deep liturgical silence to pair with his high-concept plating, Carlo established Carletto inside the sequestered vaults of the Palazzo Santa Chiara – a vacant sixteenth-century convent cloister. Here, the raw architectural stone walls, heavy linen runners, and a hand-crafted oak refectory table host twelve covers under absolute focus.',
-      stats: '12 guests, Thursday–Saturday, reservation-only logs'
+      narrative: 'On September 16, 2021, Carletto transitioned to its breathtaking current home at Via Pia 118R inside the cloistered stone cellars of Palazzo Santa Chiara, a former Clarisse convent. While originally envisioned inside a 1600s chapel, complex bureaucratic issues with the fine art heritage institute redirected Carlo to this stunning, air-conditioned sanctuary where only 20 seats (across 7 spacious tables) exist to preserve complete privacy.',
+      stats: '20 seats (7 tables), Mon-Sat, active Via Pia 118R'
     }
   };
 
@@ -36,7 +36,7 @@ export default function StoryView() {
           <span className="text-accent-vermilion font-serif font-bold italic tracking-tight lowercase block mt-1 sm:mt-2">astengo</span>
         </h1>
         <p className="font-serif text-secondary text-base max-w-2xl leading-relaxed">
-          The culinary soul of Carletto lives at the threshold of industrial memory and clerical sanctuary. Meet the descendant of Piedmontese cordwainers who converted convent vaults into culinary stages.
+          The culinary soul of Carletto lives at the threshold of industrial memory and clerical sanctuary. Meet the accountant and former amateur theater actor who converted historical convent vaults into Savona's most exclusive culinary stage.
         </p>
       </section>
 
@@ -72,10 +72,10 @@ export default function StoryView() {
 
           <div className="font-serif text-secondary space-y-4 text-base leading-relaxed">
             <p>
-              Carlo Astengo graduated in cultural anthropology before committing to the kitchen. Born in Savona to a line of historic leather guild artisans, Carlo defines cooking as a tactile, manual transmission of family codes.
+              Chef Carlo Astengo (born 1966) originally trained as an accountant, graduating from a technical institute for accountants, and began a career path toward becoming a commercialista (certified public accountant). Driven by an artistic spirit, he is entirely self-taught (autodidatta).
             </p>
             <p>
-              Applying surgical modern techniques to ancient Ligurian formulas, Carlo is known for omitting heavy cream and fats, preferring to extract pure starches and marine emulsion. The resulting plates present transparent aromatic structures that honor coastal Italy.
+              He committed himself completely to fine dining, with his formal culinary transition being deeply influenced by a pivotal training stage and apprenticeship under chef Alfredo Iannacone in Avellino. Carlo translates this meticulous accountant precision directly to the kitchen boards, omitting heavy cream and fats to focus on clean, high-intensity flavor extractions.
             </p>
           </div>
 
@@ -85,8 +85,8 @@ export default function StoryView() {
               <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">ROOTED IN THE LIGURIAN SEA</span>
             </div>
             <div>
-              <span className="text-accent-vermilion font-anton text-lg block uppercase">ANTHROPOLOGY BG</span>
-              <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">CULTURAL DISH RECONSTRUCTION</span>
+              <span className="text-accent-vermilion font-anton text-lg block uppercase">ACCOUNTANT BG</span>
+              <span className="text-[10px] text-secondary tracking-wider font-extrabold uppercase">AUTO-DIDACT & APPRENTICED</span>
             </div>
           </div>
 
@@ -99,13 +99,13 @@ export default function StoryView() {
         <div className="space-y-6">
           <BookOpen className="w-8 h-8 text-accent-vermilion" />
           <h2 className="font-anton text-3xl uppercase tracking-tight leading-none text-ink-black">
-            THE GRANDFATHER’S CORDWAINER BLUEPRINT
+            LIGURIAN NAME & VIGEVANO LEATHER CODES
           </h2>
           <p className="font-serif text-secondary text-sm leading-relaxed">
-            Carlo’s grandfather was a famous footwear industrialist who built leather riding boots in Savona. In his workshop, precision was paramount: every millimeter of cowhide had to fit the foot perfectly. Carlo translates this strict, geometric discipline to the kitchen board. The plates are arranged with the exact symmetry of structural patterns.
+            The name <strong>"Carletto"</strong> is a loving diminutive of Carlo's grandfather, Carletto, who was a legendary shoe industrialist building luxury leather riding boots in the Vigevano area. After running his own accounting firm <em>Studio Astengo</em> as a commercialista for over 24 years (1994 to 2018), Carlo translated his grandfather's geometric leather patterns and office accounting rigor directly into culinary plates.
           </p>
           <div className="p-4 bg-surface-tan border border-ink-black/20 font-serif text-xs italic text-ink-black/80">
-            "Craft is the same whether it is leather or venison; each tool has one sound, and each cut leaves no room for return."
+            "Craft is the same whether it is premium leather or crimson Oneglia shrimp; each cut requires exact geometric symmetry, leaving absolutely zero margin for return."
           </div>
         </div>
 
@@ -118,7 +118,7 @@ export default function StoryView() {
             className="w-full h-full object-cover grayscale brightness-95"
           />
           <div className="absolute bottom-4 left-4 bg-ink-black text-white px-2.5 py-1 font-oswald text-[9px] uppercase tracking-widest font-black border border-white/20">
-            SAVONA GUILD, 1924
+            VIGEVANO PATRIARCH, 1924
           </div>
         </div>
 

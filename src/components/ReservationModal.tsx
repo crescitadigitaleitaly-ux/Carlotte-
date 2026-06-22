@@ -151,13 +151,13 @@ export default function ReservationModal({ isOpen, onClose, onAddReservation }: 
                     onChange={(e) => setFormData({ ...formData, time: e.target.value })}
                     className="w-full py-2.5 px-3 bg-white border-2 border-ink-black outline-none font-bold text-ink-black font-oswald text-xs focus:ring-1 focus:ring-accent-vermilion focus:border-accent-vermilion rounded-none"
                   >
-                    <option value="19:00">19:00 (7:00 PM)</option>
-                    <option value="19:30">19:30 (7:30 PM)</option>
-                    <option value="20:00">20:00 (8:00 PM)</option>
-                    <option value="20:30">20:30 (8:30 PM)</option>
-                    <option value="21:00">21:00 (9:00 PM)</option>
-                    <option value="21:30">21:30 (9:30 PM)</option>
-                    <option value="22:00">22:00 (10:00 PM)</option>
+                    <option value="12:30">12:30 (Fri/Sat Lunch)</option>
+                    <option value="13:00">13:00 (Fri/Sat Lunch)</option>
+                    <option value="13:30">13:30 (Fri/Sat Lunch)</option>
+                    <option value="20:00">20:00 (Mon-Sat Dinner)</option>
+                    <option value="20:30">20:30 (Mon-Sat Dinner)</option>
+                    <option value="21:00">21:00 (Mon-Sat Dinner)</option>
+                    <option value="21:30">21:30 (Mon-Sat Dinner)</option>
                   </select>
                 </div>
               </div>

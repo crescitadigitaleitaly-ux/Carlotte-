@@ -17,7 +17,7 @@ export default function LocationView() {
       author: 'Alessandro B.',
       location: 'Milan, Italy',
       rating: 5,
-      content: 'Eating here is like stepping into a silent monastic ritual. The salt-crust sea bass served under 500-year-old vaults was a sublime sensory experience. Only twelve chairs, making it truly personal.',
+      content: 'Eating here is like stepping into a silent monastic ritual. The savory Risotto Carnaroli with black truffles served under 500-year-old convent vaults was a sublime sensory experience. Only twenty seats across seven tables, making it truly personal.',
       date: 'June 2026'
     },
     {
@@ -91,7 +91,7 @@ export default function LocationView() {
               <p className="text-lg font-bold text-ink-black uppercase flex items-start gap-2 pt-1">
                 <MapPin className="w-5 h-5 text-accent-vermilion shrink-0 mt-0.5" />
                 <span className="tracking-tight">
-                  Via dei Battuti 14<br />
+                  Via Pia 118R<br />
                   17100 Savona SV<br />
                   Liguria, Italy
                 </span>
@@ -104,7 +104,7 @@ export default function LocationView() {
                   Private Phone
                 </span>
                 <p className="font-bold flex items-center gap-1.5 text-black">
-                  <Phone className="w-4 h-4 text-accent-vermilion" /> +39 019 881234
+                  <Phone className="w-4 h-4 text-accent-vermilion" /> +39 392 311 4000
                 </p>
               </div>
               <div>
@@ -112,7 +112,7 @@ export default function LocationView() {
                   Direct Line
                 </span>
                 <p className="font-bold flex items-center gap-1.5 text-black">
-                  <Mail className="w-4 h-4 text-accent-vermilion" /> info@carlettosavona.it
+                  <Mail className="w-4 h-4 text-accent-vermilion" /> carlettoprivaterestaurant@gmail.com
                 </p>
               </div>
             </div>
@@ -123,15 +123,15 @@ export default function LocationView() {
               </span>
               <div className="space-y-1.5 uppercase font-black text-xs">
                 <div className="flex justify-between">
-                  <span>THURSDAY & FRIDAY</span>
-                  <span className="font-black text-ink-black">19:30 & 21:00</span>
+                  <span>MON - SAT DINNER</span>
+                  <span className="font-black text-ink-black">20:00 - 23:30</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>SATURDAY DINNER</span>
-                  <span className="font-black text-ink-black">19:00 & 21:30</span>
+                  <span>FRI & SAT LUNCH</span>
+                  <span className="font-black text-ink-black">12:30 - 15:30</span>
                 </div>
                 <div className="flex justify-between text-[#FF4D00]">
-                  <span>SUN - WED</span>
+                  <span>SUNDAYS</span>
                   <span className="font-black font-anton uppercase tracking-widest text-sm">CLOISTER CLOSED</span>
                 </div>
               </div>
@@ -163,8 +163,8 @@ export default function LocationView() {
               <div className="flex gap-4 items-center">
                 <span className="w-6 h-6 rounded-full bg-ink-black text-white flex items-center justify-center font-anton shrink-0 text-[10px]">1</span>
                 <div>
-                  <strong className="text-ink-black font-bold">The Battuti Alleyway</strong>
-                  <p className="text-secondary text-[10px] lowercase leading-tight">Locate the small iron gas lanterns hanging 3 meters tall on the wall of Via dei Battuti.</p>
+                  <strong className="text-ink-black font-bold">Via Pia Portal</strong>
+                  <p className="text-secondary text-[10px] lowercase leading-tight">Locate the portal at Via Pia 118R in Savona's historic center, just two steps from the scenic tourist port.</p>
                 </div>
               </div>
               <div className="flex gap-4 items-center">
@@ -177,8 +177,8 @@ export default function LocationView() {
               <div className="flex gap-4 items-center">
                 <span className="w-6 h-6 rounded-full bg-ink-black text-white flex items-center justify-center font-anton shrink-0 text-[10px]">3</span>
                 <div>
-                  <strong className="text-ink-black font-bold">The Silent Cloister</strong>
-                  <p className="text-secondary text-[10px] lowercase leading-tight">Walk through the dark corridor past the wells into Carletto’s candle-lit dining room.</p>
+                  <strong className="text-ink-black font-bold">The Boudoir Cloister</strong>
+                  <p className="text-secondary text-[10px] lowercase leading-tight">Walk through the dark corridor past the wells into Carletto's candle-lit dining room filled with art.</p>
                 </div>
               </div>
             </div>

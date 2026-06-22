@@ -13,21 +13,21 @@ export default function HomeView({ onNavigate, onOpenBooking }: HomeViewProps) {
   const signatureDishes = [
     {
       id: 'tartare',
-      title: 'Venison Tartare',
+      title: 'Oneglia Purple Shrimp Tartare',
       category: 'ANTIPASTO',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBIkDp_sXmspdXfinsxas3gYFxcDwWiSmpfRDG_wHFRiw1La3YFC0aTg2GiKSizvw742RDM2KlfpmWVSLSYNXbUtYuhehVH5pKYiqT7ozShlcv9yuO960MA0gqIttjjjRJTxqjymtUdE5Kp_HVmyYHzOZMEmyHnwojI7Yr-UoMBwzDUoBPTzrgODOPuAMxuEp9xoMeNG3IEI7IOPhIdbtW7RmI-jT6wgvz9JTVyOZ6PBR-m08MT0GPVrNUIul1DUgsfDPYA5oRnk1A',
-      story: 'Sourced from the deep Ligurian hills, hand-diced and infused with juniper essence and micro-herbs.',
-      pairing: 'Nebbiolo d\'Alba DOCG, 2019',
-      details: 'Served under a smoke dome infused with applewood aromatics to accentuate organic forest notes.'
+      story: 'Sourced from Oneglia\'s deep waters, hand-diced raw purple shrimp infused with citrus elixir and coastal sea fennel wild herbs.',
+      pairing: 'Vermentino Colli di Luni DOCG',
+      details: 'Accompanied by delicate orange gastrique, extracting raw maritime sweetness without grease.'
     },
     {
-      id: 'risotto',
-      title: 'Black Truffle Risotto',
-      category: 'PRIMO PIATTO',
+      id: 'roche',
+      title: 'Cauliflower Roché',
+      category: 'CONTEMPORARY CREATIVE',
       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAKsywIfocsYOEIQ3ss-Jn21txJgiwjN0Fb34BNZ5rR1gquRCkRrjM9IYddYffz-4Z1QIwSEPyPJKt3INb6TjzvH9XqgIib1pPGWWfUFstJf4U8B1wk1YtZnE42hoxflJvS-VBha7QmfhsVD2CAtIA29jw-ErUq5l7DECN3a6BD20VA48th1RXvG3agSh_5LBvzIIUdax8TJVXGZGrAUTZ6HwxqnB9infV2WeAJUa2NlJp2O9xDDml6pxmHa4_LDeKDNgoZ_2ok0LY',
-      story: 'Vialone Nano rice, aged parmesan broth. Shaved premium black winter truffles from Norcia.',
-      pairing: 'Barolo Classico DOCG, 2017',
-      details: 'Cooked slowly to release starch, mantecato with artisanal butter, producing the signature Ligurian ripple.'
+      story: 'Transformed roasted cauliflower shaped as a delicate roche shell with toasted hazelnut glaze and premium parmesan cheese cream.',
+      pairing: 'Pigato Riviera Ligure di Ponente DOC',
+      details: 'Chef Carlo Astengo\'s signature experimental research plate balancing raw sweetness and salty cheese flakes.'
     }
   ];
 
@@ -50,7 +50,7 @@ export default function HomeView({ onNavigate, onOpenBooking }: HomeViewProps) {
                 <span className="text-accent-vermilion font-serif font-bold italic tracking-tight lowercase block -mt-1 sm:-mt-2 lg:-mt-4">carletto</span>
               </h1>
               <p className="font-serif text-base sm:text-lg font-normal text-secondary max-w-sm leading-relaxed">
-                A privately hosted dining salon of just twelve covers, hidden inside the quiet stone cellars of a 16th-century monastery.
+                A privately hosted dining salon of just 20 seats (7 tables), hidden inside the quiet stone cellars of a 16th-century monastery.
               </p>
             </div>
 
@@ -59,11 +59,11 @@ export default function HomeView({ onNavigate, onOpenBooking }: HomeViewProps) {
               <div className="flex flex-col gap-3 font-oswald text-[11px] tracking-widest font-black uppercase text-ink-black">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-accent-vermilion shrink-0" /> 
-                  <span>Service Rituals: 19:30 & 21:00</span>
+                  <span>Service: Mon-Sat 20:00 (Fri/Sat Lunch 12:30)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-accent-vermilion shrink-0" /> 
-                  <span>Table occupancy: Solely 12 Covers</span>
+                  <span>Table occupancy: Only 20 Seats (7 Tables)</span>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@ export default function HomeView({ onNavigate, onOpenBooking }: HomeViewProps) {
             A MONASTERY CONVERTED FOR EPICUREAN RITUALS
           </h2>
           <p className="font-serif text-secondary text-base leading-relaxed">
-            Welcome to the Palazzo Santa Chiara. Originally a 16th-century Franciscan monastery, this sequestered space in the heart of Savona has been restored to host Carletto's dining family. Here, heavy wooden refectory tables, candlelight, and ancient stone vaults frame a singular menu served to just twelve selected guests.
+            Welcome to the Palazzo Santa Chiara. Originally a 16th-century Franciscan monastery, this sequestered space in the heart of Savona has been restored to host Carletto's dining family. Here, heavy wooden refectory tables, candlelight, and ancient stone vaults frame a singular menu served to just 20 selected guests seated at 7 tables.
           </p>
           <div className="pt-4 grid grid-cols-2 gap-4 border-t border-ink-black/15 font-oswald">
             <div>
@@ -249,7 +249,7 @@ export default function HomeView({ onNavigate, onOpenBooking }: HomeViewProps) {
           <Users className="w-8 h-8 text-accent-vermilion stroke-[1.5px]" />
           <h3 className="font-anton text-xl uppercase text-ink-black tracking-tight">CIVIL ETIQUETTE</h3>
           <p className="font-serif text-secondary text-sm leading-relaxed">
-            At Carletto, all twelve diners break bread at a single monolithic wooden board. We kindly request elegant casual attire and a respectful, collaborative atmosphere.
+            At Carletto, only 20 diners share an intimate dining experience across 7 beautifully spaced tables in a warm, artistic space. We kindly request elegant casual attire and a respectful, collaborative atmosphere.
           </p>
         </div>
         <div className="p-8 space-y-4">

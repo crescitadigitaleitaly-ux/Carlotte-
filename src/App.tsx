@@ -52,7 +52,7 @@ export default function App() {
         <div className="hidden sm:flex items-center gap-6">
           <span>PALAZZO SANTA CHIARA // SAVONA</span>
           <span>•</span>
-          <span>MAX 12 COVERS</span>
+          <span>ONLY 20 SEATS // 7 TABLES</span>
         </div>
       </div>
 
@@ -227,9 +227,9 @@ export default function App() {
           <div className="space-y-2">
             <span className="font-bold text-[#e6e2de] text-xs block">VISIT CHANNELS</span>
             <ul className="space-y-1 text-xs text-[#a8a49f]">
-              <li>Via dei Battuti 14, Savona</li>
-              <li>Thursday - Saturday</li>
-              <li>Covers limits: 12 daily</li>
+              <li>Via Pia 118R, Savona</li>
+              <li>Monday - Saturday</li>
+              <li>Capacity: 20 seats (7 tables)</li>
             </ul>
           </div>
 
