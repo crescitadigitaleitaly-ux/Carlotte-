@@ -1,0 +1,6 @@
+{
+  "name": "Carletto",
+  "description": "An exclusive culinary journey hidden within the historic walls of a 16th-century convent in Savona.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

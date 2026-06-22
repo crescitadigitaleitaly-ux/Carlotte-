@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-on-surface: #1A1A1A;
+  --color-surface-container-low: #FDFCF6;
+  --color-tertiary: #675a4d;
+  --color-surface-cream: #FDFCF6;
+  --color-secondary: #5e5e5e;
+  --color-accent-vermilion: #FF4D00;
+  --color-surface-tan: #F7F4EC;
+  --color-ink-black: #1A1A1A;
+
+  --font-anton: "Anton", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+  --font-serif: "Lora", serif;
+}
+
+/* Custom scrollbar to match the high-end editorial feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFCF6;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A1A1A;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF4D00;
+}
+
+.menu-leader {
+  border-bottom: 2px dotted #1A1A1A;
+  flex-grow: 1;
+  margin: 0 8px;
+  position: relative;
+  top: -6px;
+}
